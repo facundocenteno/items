@@ -11,11 +11,11 @@ import com.facundocenteno.springboot.app.items.models.Product;
 @FeignClient(name = "service-products")
 public interface ProductRestClient {
 	
-	@GetMapping("/products")
+	@GetMapping("/list")
 	public List<Product> getAll();
 
 
-	@GetMapping("/products/{id}")
+	@GetMapping("/get/{id}")
 	public Product getById(@PathVariable Long id);
 }
  
